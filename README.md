@@ -68,3 +68,19 @@ Quy trình phân tích cơ bản đi qua 2 tập lệnh cốt lõi:
 Sử dụng mô hình `yolov8m-pose.pt` và tập lệnh `gk_omni_v4.py` để tính toán các số liệu từ ảnh/video đầu vào.
 ```bash
 python gk_omni_v4.py --input path/to/input.mp4 --model yolov8m-pose.pt --output analyzed_data.json
+```
+**Bước 2: Tạo Báo cáo PDF Lâm sàng
+Sử dụng tập lệnh report_generator.py để chuyển đổi file JSON phân tích thành báo cáo PDF hoàn chỉnh.
+```bash
+python report_generator.py --data analyzed_data.json --output final_report.pdf
+```
+## 📁 Cấu trúc Tệp tin
+* `gk_omni_v4.py`: Tập lệnh cốt lõi cho phân tích động học và không gian.
+* `report_generator.py`: Khối xử lý tạo báo cáo PDF đầu ra.
+* `yolov8m-pose.pt`: Mô hình re-trained YOLOv8 cho nhận diện keypoints y khoa.
+* `.gitignore`: Tệp cấu hình ẩn các file hệ thống tạm.
+
+## 👥 Tác giả
+* **bme-hust** 
+* GitHub: [@nhatminh06cls-hue](https://github.com/nhatminh06cls-hue)
+* *Disclaimer: Báo cáo tự động từ hệ thống chỉ mang tính chất sàng lọc cộng đồng, không thay thế chẩn đoán y khoa chuyên nghiệp.*
